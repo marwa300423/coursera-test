@@ -1,0 +1,91 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1 {
+  text-align: center;
+  font-style: italic;
+}
+.container {
+  margin-top: 50px;
+}
+h2 {
+  float: right;
+}
+p {
+  clear: right;
+  position: relative;
+}
+.chiken {
+  background-color: pink;
+  border: 1px solid black;
+}
+.beef {
+  background-color: rgb(199, 51, 51);
+  border: 1px solid black;
+}
+.sushi {
+  background-color: rgba(250, 196, 116, 0.884);
+  border: 1px solid black;
+}
+.chiken,
+.beef,
+.sushi {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  right: 0px;
+  height: 40px;
+  width: 130px;
+  border-top: 0px;
+  border-right: 0px;
+}
+.div1,
+.div2,
+.div3 {
+  position: relative;
+  border: 1px solid black;
+  margin: 1px;
+  padding: 5px 15px;
+  padding-top: 55px;
+  background-color: #7c8185;
+  width: 33%;
+}
+
+.row {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .row {
+    justify-content: space-between;
+  }
+  .div1,
+  .div2 {
+    width: 48%;
+  }
+  .div3 {
+    margin-top: 10px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .row {
+    justify-content: flex-start;
+  }
+  .div1,
+  .div2,
+  .div3 {
+    width: 100%;
+  }
+  .div2, .div3 {
+    margin-top: 10px;
+  }
+}
